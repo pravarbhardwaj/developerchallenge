@@ -1,0 +1,37 @@
+
+<div class="container" style="padding-top: 10px">
+  <table class="table table-bordered " style="padding-bottom: 20px;">
+    <thead style="background-color:#f5f5f0; font-family:'Times New Roman', Times, serif;">
+      <tr>
+        <th translate>date</th>
+        <th translate>cmpn</th>
+        <th translate>view</th>
+        <th translate>acn</th>
+      </tr>
+    </thead>
+    <tbody *ngFor= "let f of data">
+       
+        <tr *ngIf="f.days > 0">
+
+    
+          <td >{{f.date | date: 'MM/dd/yyyy'}}<br><p translate>in</p> {{f.days}} <p translate>days</p>
+          </td>
+          <td><img src="{{f.src}}" width=30 height=30><p>{{f.name}}<br>{{f.place}}</p></td>
+          <td><p translate>vp</p></td>
+      <td> 
+              <div class="row">
+                  <a href="#" ><span class="glyphicon glyphicon-signal"><br><p translate>report</p></span></a>
+                  <a href="#"><span class="glyphicion glyphicon-file"><br><p>CSV</p></span></a>
+                <div class="col-xs-12 col-12 col-md-4 form-group">        
+                  <input bsDatepicker  type="hidden" [(ngModel)]="f.date"  #dpYMD="bsDatepicker"  (ngModelChange)="updateMyDate($event)" (ngModelChange)="updateMyId(f.id)" (ngModelChange)="final(1)" [attr.aria-expanded]="dpYMD.isOpen">
+               </div>
+               <div class="col-xs-12 col-12 col-md-4 form-group">
+                  <a (click)="dpYMD.toggle()"  ><span class="glyphicon glyphicon-calendar" style="color:blue"><br><h6>SCHEDULE AGAIN</h6></span></a>
+              </div>
+            </div>
+            
+</td>
+</tr>
+</tbody>
+
+

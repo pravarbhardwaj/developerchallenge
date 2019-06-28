@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+  <script src="src/js/angular-datepicker.js"></script>
+</head>  
+    <body>
+    
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+           
+              <img src="assets/img/logo.jpg" alt="logo" style="width:40px;">
+              <ul class="na">
+              <li class="link">Spotlight</li>
+              
+                <li class="link">By BlueStacks</li>
+                </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                <div ngbDropdown class="d-inline-block">
+                <button class="btn btn btn-primary dropdown-toggle" id="dropdownBasic1" ngbDropdownToggle><span
+                    class="caret; glyphicon glyphicon-menu-hamburger"></span></button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <p ngbDropdownItem>Language:</p>
+                  <button ngbDropdownItem (click)="switchLanguage('en')">English</button>
+                  <button ngbDropdownItem (click)="switchLanguage('es')">Spanish</button>
+                </div>
+              </div>
+          
+          
+              <!-- <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>     -->
+              </ul>
+            </div>  
+          </nav>
+      
+    
+    
+
+
+
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">
+      <img src="assets/img/logo.jpg" alt="logo" style="width:40px;">
+    </a>
+    <span class="navbar-text1">Spotlight<h6 style="font-size: 7px;">By BlueStacks</h6> <b
+        class="navbar-right">BETA</b></span>
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn btn-primary dropdown-toggle" id="dropdownBasic1" ngbDropdownToggle><span
+          class="caret; glyphicon glyphicon-menu-hamburger"></span></button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <p ngbDropdownItem>Language:</p>
+        <button ngbDropdownItem (click)="switchLanguage('en')">English</button>
+        <button ngbDropdownItem (click)="switchLanguage('es')">Spanish</button>
+      </div>
+    </div>
+  </nav>
+  <div class="t3" style="padding-bottom: 20px;padding-top: 30px; text-align:center; color:#003399; font-size: 20px">
+    <ul class="tran">
+    <li><p translate>mng &nbsp;</p></li><li translate>cmp</li>
+  </ul>  
+  </div>
+  <div class="container bt">  
+    <button class="btn btn-success cen" type="button"><a routerLink="upcoming"><p class="whi" translate>upcoming</p></a></button>
+    <button class="btn btn-success cen" type="button"><a routerLink="live"><p class="whi" translate>live</p></a></button>
+    <button class="btn btn-success cen" type="button"><a routerLink="past"><p class="whi" translate>past</p></a></button>
+  </div>
+  <router-outlet></router-outlet>
+</body>
+</html>

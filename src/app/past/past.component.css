@@ -1,0 +1,30 @@
+.na{
+    display:inline-flex;
+    list-style: none;
+    margin-left:-42px; 
+}
+
+.l{
+    margin-left:1px;
+}
+
+.do{
+    color: gray;
+}
+.glyphicon-usd:before{
+    padding-left:12px;
+}
+
+.fo{
+    font-weight: 600;
+    font-size:11px;
+}
+
+.nao{
+    display:inline-flex;
+    list-style: none;
+}
+
+.nao li{
+    margin-right:13px;
+}

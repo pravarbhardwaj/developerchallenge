@@ -1,0 +1,74 @@
+.navbar-brand{
+    padding-left: 1px;
+    padding-top: 3px;
+    background-color: #003399;
+    padding-right: 1;}
+    .navbar-text{
+    padding-right: 0px;
+    padding-top: 0px;
+    }
+    
+    .navbar-text1{
+    padding-left: 0px;
+    padding-top: 0px;
+    }
+
+    .active, .li:hover{
+        background-color: green!important;
+
+    }
+    .btn-primary-outline {
+        background-color: transparent;
+        border-color: #ccc;
+      }
+      .e-input-group {
+                    width: 0%!important;
+      }
+
+      .na{
+          list-style: none;
+          margin-left:-29px;
+      }
+      .link{
+          color:#ffff;
+      }
+      .navbar-nav{
+          float: right
+      }
+      .tran{
+          display: inline-flex;
+          list-style:none;
+      }
+      .bt{
+          text-align: center;
+      }
+
+      .cen{
+          margin-right: 2px;
+          color: white;
+      }
+
+      a:hover{
+          text-decoration: none !important;
+      }
+
+      /* button:active{
+          background: #fff;
+          color: green;
+          border: 1px solid green;
+      } */
+
+      button:active{
+           color:green !important;
+           background:white !important;
+      }
+
+      .whi{
+          color:white;
+      }
+      .whi:active{
+        color:green;
+    }
+    .bs-datepicker{
+        margin-left:832px !important;
+    }
