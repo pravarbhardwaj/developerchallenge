@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {array} from '../array';
-import {dataservice} from '../data.service';
+import { array } from '../array';
+import { dataservice } from '../data.service';
 import * as moment from 'moment';
 import { TranslateService } from '@ngx-translate/core';
 @Component({
@@ -20,7 +20,7 @@ export class UpcomingComponent implements OnInit {
   aa: any;
   date: string;
   cc: any;
-  constructor(private _dataservice: dataservice,private translate: TranslateService) {
+  constructor(private _dataservice: dataservice, private translate: TranslateService) {
     let nn = this.myId;
 
     let date = new Date();
@@ -29,38 +29,30 @@ export class UpcomingComponent implements OnInit {
   switchLanguage(language: string) {
     this.translate.use(language);
   }
-  
+
   ngOnInit() {
     this.data = this._dataservice.getdata()
-  
-    setInterval(() =>
-    {
-      let currentDate = new Date();
-    },1000)
+
+
   }
-  final(num:number)
-  {
-    if(num==1)
-    { let aa = moment(this.myDate, 'MM/DD/YYYY');
-    console.log(aa)
-    console.log(this.cc = aa.diff(this.date, 'days'));
-    let currentDate = new Date();
-      
-    this.myList = this.data
-      let itemUpdated = {id:this.myId, days: this.cc}; 
-      let a=this.data.find(item => item.id == itemUpdated.id).days = itemUpdated.days;
-      
-       this.date =
+  final(num: number) {
+    if (num == 1) {
+      let aa = moment(this.myDate, 'MM/DD/YYYY');
+      console.log(this.cc = aa.diff(this.date, 'days'));
+      let currentDate = new Date();
+
+      this.myList = this.data
+      let itemUpdated = { id: this.myId, days: this.cc };
+      let a = this.data.find(item => item.id == itemUpdated.id).days = itemUpdated.days;
+
+      this.date =
         currentDate.toDateString()
-        var date = moment()
-        date.set({hour:0,minute:0,second:0,millisecond:0})
-        date.toISOString()
-        date.format()
-        this.date = moment( date, 'MM-DD-YYYY HH:mm:ss',true).format("MM-DD-YYYY HH:mm:ss");
-        return date;
-        
-
-
+      var date = moment()
+      date.set({ hour: 0, minute: 0, second: 0, millisecond: 0 })
+      date.toISOString()
+      date.format()
+      this.date = moment(date, 'MM-DD-YYYY HH:mm:ss', true).format("MM-DD-YYYY HH:mm:ss");
+      return date;
     }
   }
   updateMyDate(newDate: number) {

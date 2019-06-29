@@ -1,44 +1,73 @@
-
 <div class="container" style="padding-top: 10px">
   <table class="table table-bordered " style="padding-bottom: 20px;">
     <thead style="background-color:#f5f5f0; font-family:'Times New Roman', Times, serif;">
       <tr>
-        <th translate>date</th>
-        <th translate>cmpn</th>
-        <th translate>view</th>
-        <th translate>acn</th>
+        <th class="s" translate>date</th>
+        <th class="s" translate>cmpn</th>
+        <th class="s" translate>view</th>
+        <th class="s" translate>acn</th>
       </tr>
     </thead>
-    <tbody *ngFor= "let f of data">
-       
-        <tr *ngIf="f.days < 0">
+    <tbody *ngFor="let f of data">
 
-    
-          <td>{{f.date | date: 'MM/dd/yyyy'}}<br><ul class="na"><li>{{-f.days}}</li><li><p translate>da</p></li></ul>
-          </td>
+      <tr *ngIf="f.days < 0">
 
-          <td><ul class="na"><li><img src="{{f.src}}" width=30 height=30></li><li class="l"><p>{{f.name}}<br>{{f.place}}</p></li></ul></td>
-          <td style="width: 10px;"><a class="do" ><span class="glyphicon glyphicon-usd"><br><p class="fo"translate>vp</p></span></a></td>
-      <td> 
-              <div class="row">
-                  <ul class="nao">
-                <li><span class="glyphicon glyphicon-signal"><br><p translate>report</p></span></li>
-          
-                <li>  
-                <a href=""><span class="glyphicon glyphicon-list-alt"><br><p>CSV</p></span></a>
+
+        <td>{{f.date | date: 'MM/dd/yyyy'}}<br>
+          <ul class="na">
+            <li>{{-f.days}}</li>
+            <li>&nbsp;</li>
+            <li>
+              <p translate>da</p>
+            </li>
+          </ul>
+        </td>
+
+        <td>
+          <ul class="na">
+            <li><img src="{{f.src}}" width=30 height=30></li>
+            <li class="l">
+              <p>{{f.name}}<br>{{f.place}}</p>
+            </li>
+          </ul>
+        </td>
+        <td style="width: 10px;">
+          <ul class="nao">
+            <li><a class="do">
+            <li><span class="glyphicon glyphicon-usd" style="color:lightgray">
+            <li class="fo" translate>view</li>
+            <li style="font-size:10px;" translate>p</li></span></li></a>
+          </ul>
+        <td>
+          <div class="row">
+            <ul class="nao">
+              <ul class="nao">
+                <li><span class="glyphicon glyphicon-signal" style="color:lightgray">
+                <li translate style="font-size:10px">rep</li></span></li>
+              </ul>
+              <li>
+                <ul class="nao">
+                  <li><span class="glyphicon glyphicon-list-alt" style="color:lightgray">
+                  <li style="font-size:10px">CSV</li></span>
+              </li>
+            </ul>
+
+            <li>
+              <ul class="nao">
+                <li> <input bsDatepicker type="hidden" [(ngModel)]="f.date" #dpYMD="bsDatepicker"
+                    (ngModelChange)="updateMyDate($event)" (ngModelChange)="updateMyId(f.id)" (ngModelChange)="final(1)"
+                    [attr.aria-expanded]="dpYMD.isOpen" ng-click="pushInArray(f.date)">
                 </li>
-                  <li>
-        
-                    <input bsDatepicker  type="hidden" [(ngModel)]="f.date"  #dpYMD="bsDatepicker"  (ngModelChange)="updateMyDate($event)" (ngModelChange)="updateMyId(f.id)" (ngModelChange)="final(1)" [attr.aria-expanded]="dpYMD.isOpen" ng-click="pushInArray(f.date)">
-                    <!-- <input bsDatepicker type="hidden" (value)="f.id" [(ngModel)]="f.date" #dpYMD="bsDatepicker" class="Datepicker" data-date-format="MM/dd/yyyy" class="form-control"  ng-click="pushInArray(f.date)" (ngModelChange)="updateMyDate($event)"  (ngModelChange)="updateMyId(f.id)" [attr.aria-expanded]="dpYMD.isOpen" (ngModelChange)="final(1)" close-text="Close" > -->
-              
-                <a  (click)="dpYMD.toggle()"  ><span class="glyphicon glyphicon-calendar" style="color:blue"><p translate>sa</p></span></a>
-                    </li>
-                  </ul>
-             </div>
-            
-</td>
-</tr>
-</tbody>
 
+                <a (click)="dpYMD.toggle()"><span class="glyphicon glyphicon-calendar" style="color:royalblue">
+                    <li translate style="font-size:10px">sa</li>
+                    <li translate class="sa">ag</li>
+                  </span></a>
+              </ul>
+            </li>
+            </ul>
+          </div>
 
+        </td>
+      </tr>
+    </tbody>

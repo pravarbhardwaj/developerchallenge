@@ -1,9 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { array } from '../array';
-
-import * as moment from 'moment';
-
-import {PastComponent} from '../past/past.component';
 import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-home',

@@ -20,7 +20,7 @@ export class LiveComponent implements OnInit {
   aa: any;
   date: string;
   cc: any;
-  constructor(private _dataservice: dataservice,private translate: TranslateService) {
+  constructor(private _dataservice: dataservice, private translate: TranslateService) {
     let nn = this.myId;
 
     let date = new Date();
@@ -32,15 +32,12 @@ export class LiveComponent implements OnInit {
   ngOnInit() {
     this.data = this._dataservice.getdata()
 
-    setInterval(() =>
-    {
-      let currentDate = new Date();
-    },1000)
+
   }
   final(num: number) {
     if (num == 1) {
       let aa = moment(this.myDate, 'MM/DD/YYYY');
-      //console.log(aa)
+
       this.cc = aa.diff(this.date, 'days');
 
       this.myList = this.data
@@ -50,11 +47,11 @@ export class LiveComponent implements OnInit {
       this.date =
         currentDate.toDateString();
       var date = moment();
-      date.toISOString();
+
       date.set({ hour: 0, minute: 0, second: 0, millisecond: 0 });
-      date.toISOString()
-      date.format();
+
       this.date = moment(date, 'MM-DD-YYYY HH:mm:ss', true).format("MM-DD-YYYY HH:mm:ss");
+      console.log(date);
       return date;
     }
   }
