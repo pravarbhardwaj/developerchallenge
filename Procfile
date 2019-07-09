@@ -1,1 +1,1 @@
-    worker: ng serve
+    worker: npm start
